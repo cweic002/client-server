@@ -25,7 +25,6 @@ public:
 private:
     std::set<std::pair<QString,quint16>> listIp;
     QUdpSocket * socket;
-    Param * param;
     quint16 port;
     QHostAddress hostAddress;
     QTextBrowser * textBrowser;

@@ -9,7 +9,3 @@ VLabelDoubleSpinBox::VLabelDoubleSpinBox(const QString & name):label(new QLabel(
     hBoxLayout->addWidget(doubleSpinBox);
     hBoxLayout->setMargin(1);
 }
-
-VLabelDoubleSpinBox::~VLabelDoubleSpinBox(){
-
-}

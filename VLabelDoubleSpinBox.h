@@ -12,7 +12,6 @@ struct VLabelDoubleSpinBox
     QDoubleSpinBox * doubleSpinBox;
     QHBoxLayout * hBoxLayout;
     VLabelDoubleSpinBox(const QString & name);
-    ~VLabelDoubleSpinBox();
 };
 
 #endif // VLABELDOUBLESPINBOX_H

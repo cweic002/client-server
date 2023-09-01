@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent),socket(new QUdpSocket(this)),param(new Param()),
+    : QMainWindow(parent),socket(new QUdpSocket(this)),
       textBrowser(new QTextBrowser(this)),dialogSettingsNetwork(new DialogSettingsNetwork(this))
 {
     //create QMainWindow, socket , param, dialogSettingsNetwork;

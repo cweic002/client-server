@@ -25,7 +25,7 @@ public:
     ~MainWindow();
 private:
     QUdpSocket * socket;
-    Param * param;
+    Param param;
     quint16 port;
     QTextBrowser * textBrowser;
     QHostAddress hostAddress;

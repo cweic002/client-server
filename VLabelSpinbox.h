@@ -12,7 +12,6 @@ struct VLabelSpinBox
     QSpinBox * spinBox;
     QHBoxLayout * hBoxLayout;
     VLabelSpinBox(const QString & name);
-    ~VLabelSpinBox();
 };
 
 #endif // LABELSPINBOX_H
