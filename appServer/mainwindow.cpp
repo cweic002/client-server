@@ -102,11 +102,9 @@ void MainWindow::readingData(){
             socket->readDatagram(datagrama.data(),datagrama.size(),&senderAddress,&senderPort);
             std::memcpy(&param,datagrama.data(),datagrama.size());
             textBrowser->append(param);
-            qDebug()<<"Size:"<<size<<" ip:"<<senderAddress<<" Port:"<<senderPort<<endl;
             listIp.emplace(senderAddress.toString(),senderPort);
             for(auto iter:listIp){
                 socket->writeDatagram(datagrama.data(),datagrama.size(),QHostAddress(iter.first),iter.second);
-                qDebug()<<"send- ip:"<<iter.first<<" Port:"<<iter.second<<endl;
             }
         }else{
             socket->readDatagram(datagrama.data(),datagrama.size(),&senderAddress,&senderPort);

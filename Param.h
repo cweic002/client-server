@@ -1,36 +1,11 @@
 #ifndef PARAM_H
 #define PARAM_H
-
 #include <QTextStream>
 
-struct float8;
-
-struct float32{
-    float32() = default;
-    unsigned int M_19 : 19;
-    unsigned int M_4 : 4;
-    unsigned int P_1 : 2;
-    unsigned int P_2 : 5;
-    unsigned int P_S : 1;
-    unsigned int S : 1;
-    operator float() const;
-    operator float8() const;
-};
-
 struct float8{
-    float8():M(0),P(0),P_S(0),S(0){}
-    float8(float a){
-        union {
-            float f;
-            float32 f32;
-        };
-        f = a;
-        *this = f32;
-    }
-    char M:4;
-    char P:2;
-    char P_S:1;
-    char S:1;
+    float8():numb(0){}
+    float8(double a):numb(static_cast<unsigned char>(a*10-1)){}
+    signed char numb;
     operator float() const;
 };
 
